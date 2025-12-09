@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediDates - Perfil del usuario</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="dashboard-body fade-in">
+
+  <header class="dashboard-header">
+    <img src="img/logo-medidates.png" class="dashboard-logo" alt="Logo MediDates" />
+
+    <div class="dashboard-user">
+      <span>Hola, Juan 👋</span>
+      <div class="dashboard-avatar">J</div>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <a href="dashboard.html" class="back-button">← Volver al Dashboard</a>
+
+    <h1 class="dashboard-title">Mi perfil</h1>
+    <p class="dashboard-subtitle">
+      Administra tu información personal, datos de contacto y configuración de cuenta.
+    </p>
+
+    <section class="profile-container">
+
+      <div class="profile-photo-section">
+        <img src="img/avatar-paciente.png" class="profile-photo" alt="Foto de perfil">
+        <button class="btn-secondary small">Cambiar foto</button>
+      </div>
+
+      <form class="profile-form">
+
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" value="Juan" />
+        </div>
+
+        <div class="form-group">
+          <label>Apellido</label>
+          <input type="text" value="Bedoya" />
+        </div>
+
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" value="a850040474@my.uvm.edu.mx" />
+        </div>
+
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="text" placeholder="Tu número de contacto" />
+        </div>
+
+        <div class="form-group">
+          <label>Dirección</label>
+          <input type="text" placeholder="Tu dirección" />
+        </div>
+
+        <h3 class="section-title">Seguridad</h3>
+
+        <div class="form-group">
+          <label>Nueva contraseña</label>
+          <input type="password" placeholder="Escribe una nueva contraseña" />
+        </div>
+
+        <div class="form-group">
+          <label>Confirmar contraseña</label>
+          <input type="password" placeholder="Repite la nueva contraseña" />
+        </div>
+
+        <button class="btn-primary">Guardar cambios</button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <!-- =======================
+     FOOTER PREMIUM MEDIDATES
+========================== -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <img src="img/logo-medidates.png" class="footer-logo" alt="MediDates logo">
+            <p class="footer-tagline">Conectando tu salud con tecnología.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Soporte técnico</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 MediDates. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+
+</html>

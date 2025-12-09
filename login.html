@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>MediDates - Iniciar sesión</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates - Iniciar sesión</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="login-body">
+<body class="login-body fade-in">
 
-  <main class="login-container">
+    <div class="login-container">
 
-    <section class="login-card">
+        <!-- FORMULARIO -->
+        <div class="login-card">
+            <img src="img/logo-medidates.png" class="login-logo" />
 
-      <div class="login-header">
-        <img src="img/logo-medidates.png" class="login-logo" alt="MediDates Logo">
-        <h1>Bienvenido</h1>
-        <p>Accede a tu panel médico</p>
-      </div>
+            <div class="login-header">
+                <h1 class="login-title">Bienvenido</h1>
+                <p class="login-subtitle">Inicia sesión en tu cuenta MediDates</p>
+            </div>
 
-      <form action="dashboard.html" method="get" class="login-form">
+            <form id="form-login" class="login-form">
 
-        <label>Correo electrónico</label>
-        <input type="email" required>
+                <label for="login-email">Correo electrónico</label>
+                <input type="email" id="login-email" placeholder="usuario@ejemplo.com" />
 
-        <label>Contraseña</label>
-        <input type="password" required>
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" placeholder="••••••••" />
 
-        <button class="btn btn-primary login-btn">Iniciar sesión</button>
+                <!-- MENSAJE DE ERROR -->
+                <div id="login-error" class="alert alert-error" style="display:none;"></div>
 
-        <a href="#" class="login-forgot">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn-primary login-btn">Iniciar sesión</button>
 
-      </form>
-    </section>
+                <div class="login-links">
+                    <a href="#" class="small-link">¿Olvidaste tu contraseña?</a><br>
+                    <a href="register.html" class="small-link">¿No tienes cuenta? Regístrate</a>
+                </div>
 
-    <section class="login-side">
-      <img src="img/hero-hospital.png" class="login-illustration" alt="">
-    </section>
+            </form>
+        </div>
 
-  </main>
+        <!-- ILUSTRACIÓN -->
+        <img src="img/img-login.png" class="login-illustration" />
+
+    </div>
+
+    <!-- SCRIPT VALIDACIÓN -->
+    <script>
+        const formLogin = document.getElementById("form-login");
+        const email = document.getElementById("login-email");
+        const password = document.getElementById("login-password");
+        const errorBox = document.getElementById("login-error");
+
+        formLogin.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            errorBox.style.display = "none";
+
+            if (email.value.trim() === "" || password.value.trim() === "") {
+                errorBox.textContent = "Por favor completa todos los campos para iniciar sesión.";
+                errorBox.style.display = "block";
+                return;
+            }
+
+            // Si todo OK → navegar al dashboard
+            location.href = "dashboard.html";
+        });
+    </script>
+
+    <!-- =======================
+     FOOTER PREMIUM MEDIDATES
+========================== -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <img src="img/logo-medidates.png" class="footer-logo" alt="MediDates logo">
+            <p class="footer-tagline">Conectando tu salud con tecnología.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Soporte técnico</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 MediDates. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>

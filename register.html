@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates - Registro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dashboard-body fade-in">
+
+    <div class="login-container">
+
+        <!-- FORMULARIO -->
+        <div class="login-card">
+            <img src="img/logo-medidates.png" class="login-logo">
+
+            <div class="login-header">
+                <h1 class="login-title">Crear cuenta</h1>
+                <p class="login-subtitle">Registra tu cuenta de usuario</p>
+            </div>
+
+            <form id="form-register" class="login-form">
+
+                <label>Nombre</label>
+                <input type="text" id="reg-nombre" placeholder="Tu nombre">
+
+                <label>Correo electrónico</label>
+                <input type="email" id="reg-email" placeholder="usuario@ejemplo.com">
+
+                <label>Contraseña</label>
+                <input type="password" id="reg-password" placeholder="••••••••">
+
+                <label>Confirmar contraseña</label>
+                <input type="password" id="reg-confirm" placeholder="••••••••">
+
+                <!-- MENSAJES -->
+                <div id="reg-error" class="alert alert-error" style="display:none;"></div>
+                <div id="reg-success" class="alert alert-success" style="display:none;"></div>
+
+                <button type="submit" class="btn-primary login-btn">Crear cuenta</button>
+
+                <div class="login-links">
+                    <a href="login.html" class="small-link">¿Ya tienes cuenta? Inicia sesión</a>
+                </div>
+            </form>
+        </div>
+
+        <img src="img/img-login.png" class="login-illustration" />
+
+    </div>
+
+    <!-- SCRIPT VALIDACIÓN -->
+    <script>
+        const formReg = document.getElementById("form-register");
+
+        formReg.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("reg-nombre").value.trim();
+            const email = document.getElementById("reg-email").value.trim();
+            const pass = document.getElementById("reg-password").value.trim();
+            const confirm = document.getElementById("reg-confirm").value.trim();
+
+            const errorBox = document.getElementById("reg-error");
+            const successBox = document.getElementById("reg-success");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (!name || !email || !pass || !confirm) {
+                errorBox.textContent = "Todos los campos son obligatorios.";
+                errorBox.style.display = "block";
+                return;
+            }
+
+            if (pass !== confirm) {
+                errorBox.textContent = "Las contraseñas no coinciden.";
+                errorBox.style.display = "block";
+                return;
+            }
+
+            successBox.textContent = "Cuenta creada correctamente. Ahora puedes iniciar sesión.";
+            successBox.style.display = "block";
+
+            formReg.reset();
+        });
+    </script>
+
+    <!-- =======================
+     FOOTER PREMIUM MEDIDATES
+========================== -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <img src="img/logo-medidates.png" class="footer-logo" alt="MediDates logo">
+            <p class="footer-tagline">Conectando tu salud con tecnología.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Soporte técnico</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 MediDates. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

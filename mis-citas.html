@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediDates - Mis citas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="dashboard-body fade-in">
+
+  <header class="dashboard-header">
+    <img src="img/logo-medidates.png" class="dashboard-logo" alt="Logo MediDates" />
+
+    <div class="dashboard-user">
+      <span>Hola, Juan 👋</span>
+      <div class="dashboard-avatar">J</div>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <a href="dashboard.html" class="back-button">← Volver al Dashboard</a>
+
+    <h1 class="dashboard-title">Mis citas</h1>
+    <p class="dashboard-subtitle">
+      Consulta y gestiona todas tus citas médicas desde un solo lugar.
+    </p>
+
+    <!-- Filtros -->
+    <div class="filter-container">
+      <button class="filter-btn active">Próximas</button>
+      <button class="filter-btn">Pasadas</button>
+      <button class="filter-btn">Canceladas</button>
+    </div>
+
+    <!-- Lista de citas -->
+    <section class="appointments-list">
+
+      <div class="appointment-card">
+        <div>
+          <h3 class="appointment-title">Cardiología · Dr. Ramírez</h3>
+          <p class="appointment-info">1 de diciembre · 10:30 a. m.</p>
+          <p class="appointment-info">Hospital Ángeles del Valle · Consultorio 302</p>
+        </div>
+        <div class="appointment-actions">
+          <button class="btn-secondary">Detalles</button>
+          <button class="btn-primary">Reprogramar</button>
+        </div>
+      </div>
+
+      <div class="appointment-card">
+        <div>
+          <h3 class="appointment-title">Dermatología · Dra. Santos</h3>
+          <p class="appointment-info">8 de diciembre · 12:00 p. m.</p>
+          <p class="appointment-info">Clínica Santa María · Piso 1</p>
+        </div>
+        <div class="appointment-actions">
+          <button class="btn-secondary">Detalles</button>
+          <button class="btn-primary">Reprogramar</button>
+        </div>
+      </div>
+
+      <div class="appointment-card">
+        <div>
+          <h3 class="appointment-title">Nutrición · Lic. Herrera</h3>
+          <p class="appointment-info">15 de diciembre · 09:00 a. m.</p>
+          <p class="appointment-info">Hospital Central Norte · Área de Nutrición</p>
+        </div>
+        <div class="appointment-actions">
+          <button class="btn-secondary">Detalles</button>
+          <button class="btn-primary">Reprogramar</button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =======================
+     FOOTER PREMIUM MEDIDATES
+========================== -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <img src="img/logo-medidates.png" class="footer-logo" alt="MediDates logo">
+            <p class="footer-tagline">Conectando tu salud con tecnología.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Soporte técnico</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 MediDates. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+
+</html>

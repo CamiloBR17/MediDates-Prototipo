@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates - Agendar cita</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="dashboard-body">
+
+    <!-- HEADER FIJO -->
+    <header class="dashboard-header">
+        <img src="img/logo-medidates.png" class="dashboard-logo" alt="Logo MediDates" />
+
+        <div class="dashboard-user">
+            <span>Hola, Juan 👋</span>
+            <div class="dashboard-avatar">J</div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <a href="dashboard.html" class="back-button">← Volver al Dashboard</a>
+
+        <h1 class="dashboard-title">Agendar cita</h1>
+        <p class="dashboard-subtitle">
+            Programa una nueva cita médica seleccionando especialidad, médico, fecha y horario disponible.
+        </p>
+
+        <!-- 🔔 CONTENEDOR PARA MENSAJES (ÉXITO / ERROR) -->
+        <div id="alert-box"></div>
+
+        <!-- 📝 FORMULARIO DE AGENDAR CITA -->
+        <form id="form-agendar" class="appointment-form">
+
+            <!-- ESPECIALIDAD -->
+            <div class="form-group">
+                <label for="especialidad">Especialidad</label>
+                <select id="especialidad">
+                    <option value="">Selecciona una especialidad</option>
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="nutricion">Nutrición</option>
+                    <option value="pediatria">Pediatría</option>
+                    <option value="ginecologia">Ginecología</option>
+                </select>
+            </div>
+
+            <!-- MÉDICO -->
+            <div class="form-group">
+                <label for="medico">Médico</label>
+                <select id="medico">
+                    <option value="">Selecciona un médico</option>
+                    <option value="ramirez">Dr. Ramírez</option>
+                    <option value="santos">Dra. Santos</option>
+                    <option value="herrera">Lic. Herrera</option>
+                </select>
+            </div>
+
+            <!-- FECHA -->
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <!-- HORA -->
+            <div class="form-group">
+                <label for="hora">Hora</label>
+                <select id="hora">
+                    <option value="">Selecciona un horario</option>
+                    <option>09:00 a. m.</option>
+                    <option>10:30 a. m.</option>
+                    <option>12:00 p. m.</option>
+                    <option>03:00 p. m.</option>
+                </select>
+            </div>
+
+            <!-- BOTÓN -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary-large">Confirmar cita</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- ✅ LÓGICA DE VALIDACIÓN + ALERTAS AUTO-CERRABLES -->
+    <script>
+        (function () {
+            const form = document.getElementById("form-agendar");
+            const alertBox = document.getElementById("alert-box");
+            let alertTimeoutId = null;
+
+            function mostrarAlerta(tipo, mensaje) {
+                // Limpiar timeout anterior para que no se cierre antes de tiempo
+                if (alertTimeoutId) {
+                    clearTimeout(alertTimeoutId);
+                    alertTimeoutId = null;
+                }
+
+                // Resetear clases base
+                alertBox.className = "alert";
+
+                if (tipo === "success") {
+                    alertBox.classList.add("alert-success");
+                } else {
+                    alertBox.classList.add("alert-error");
+                }
+
+                alertBox.textContent = mensaje;
+
+                // Auto-ocultar después de 4 segundos
+                alertTimeoutId = setTimeout(() => {
+                    alertBox.className = "alert";
+                    alertBox.textContent = "";
+                }, 4000);
+            }
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const especialidad = document.getElementById("especialidad").value;
+                const medico = document.getElementById("medico").value;
+                const fecha = document.getElementById("fecha").value;
+                const hora = document.getElementById("hora").value;
+
+                // Validación de campos obligatorios
+                if (!especialidad || !medico || !fecha || !hora) {
+                    mostrarAlerta("error", "Por favor completa todos los campos.");
+                    return;
+                }
+
+                // Validar que la fecha no sea pasada
+                const hoy = new Date().toISOString().split("T")[0];
+                if (fecha < hoy) {
+                    mostrarAlerta("error", "No puedes seleccionar una fecha pasada.");
+                    return;
+                }
+
+                // Si todo está correcto → ÉXITO
+                mostrarAlerta("success", "✔ Cita agendada correctamente.");
+
+                // Opcional: reiniciar formulario
+                form.reset();
+            });
+        })();
+    </script>
+
+</body>
+</html>
