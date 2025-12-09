@@ -308,20 +308,22 @@ img {
 ==================================================== */
 
 .login-body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #e1f1ff, #f9fbff 60%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #e1f1ff, #f9fbff 60%);
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;  /* evita que quede pegado arriba */
 }
 
 .login-container {
-  max-width: 1200px;
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 420px 1fr; /* Izquierda fija, derecha flexible */
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .login-card {
@@ -410,9 +412,11 @@ img {
 
 /* Ilustraciones de login / registro */
 .login-illustration {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 520px;   /* imagen grande */
+    height: auto;
+    display: block;
+    margin: 0 auto;     /* centrar */
 }
 
 /* Contenedor para tarjetas simples tipo "forgot password" */
