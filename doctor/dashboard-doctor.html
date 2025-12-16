@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates - Dashboard Médico</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+        <img src="../img/logo-medidates.png" alt="MediDates" class="dashboard-logo">
+
+        <div class="dashboard-user">
+            <span>Dr. Ramírez</span>
+            <div class="dashboard-avatar">DR</div>
+
+            <button class="btn-secondary small" onclick="location.href='/PrototipoWeb/login.html'">
+                Cerrar sesión
+            </button>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="dashboard-container fade-in">
+
+        <h1 class="dashboard-title">Panel del médico</h1>
+        <p class="dashboard-subtitle">
+            Consulta tus citas programadas, pacientes asignados y gestiona tu agenda médica.
+        </p>
+
+        <!-- PRÓXIMA CITA -->
+        <section class="card">
+            <p class="card-label">PRÓXIMA CITA</p>
+            <h2 class="card-title">Juan Bedoya</h2>
+            <p class="card-info">Hoy · 10:30 a. m.</p>
+            <p class="card-info">Consulta de cardiología</p>
+
+            <div class="card-buttons">
+                <button class="btn-secondary">Ver expediente</button>
+                <button class="btn-primary">Iniciar consulta</button>
+            </div>
+        </section>
+
+        <!-- RESUMEN -->
+        <section class="card card-summary">
+            <div class="summary-content">
+                <p class="card-label">RESUMEN DEL DÍA</p>
+                <ul class="summary-list">
+                    <li><strong>5</strong> citas programadas</li>
+                    <li><strong>2</strong> consultas pendientes</li>
+                    <li><strong>1</strong> estudio por revisar</li>
+                </ul>
+            </div>
+
+            <img src="/PrototipoWeb/img/img-dashboard-medical.png" class="summary-img" alt="Resumen médico">
+        </section>
+
+        <!-- ACCIONES RÁPIDAS -->
+        <div class="options-grid">
+
+            <a href="mis-citas.html" class="option-card">
+                <div class="option-icon option-icon-calendar">📅</div>
+                <h3>Mis citas</h3>
+                <p>Consulta tu agenda médica.</p>
+            </a>
+
+            <a href="pacientes.html" class="option-card">
+                <div class="option-icon option-icon-history">📁</div>
+                <h3>Pacientes</h3>
+                <p>Revisa expedientes clínicos.</p>
+            </a>
+
+            <a href="perfil.html" class="option-card">
+                <div class="option-icon option-icon-profile">⚙️</div>
+                <h3>Mi perfil</h3>
+                <p>Administra tu información.</p>
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

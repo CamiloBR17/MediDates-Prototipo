@@ -312,7 +312,8 @@ img {
     background: radial-gradient(circle at top, #e1f1ff, #f9fbff 60%);
     display: flex;
     justify-content: center;
-    padding-top: 60px;  /* evita que quede pegado arriba */
+    padding-top: 60px;
+    align-items: center;  /* evita que quede pegado arriba */
 }
 
 .login-container {
@@ -975,6 +976,14 @@ select:focus {
     padding-top: 130px;
 }
 
+/* ====================================================
+   FIX: LOGIN SIN HEADER
+==================================================== */
+
+.login-body .login-container {
+    padding-top: 0 !important;
+}
+
 /* Espaciados internos de páginas */
 .dashboard-container > *,
 .appointments-list,
@@ -1101,4 +1110,35 @@ footer a:hover {
 
 .dashboard-container {
     padding-top: 160px !important;
+}
+
+/* ===============================
+   SELECT PREMIUM - LOGIN
+=============================== */
+
+.role-select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #d0d7df;
+    font-size: 14px;
+    background-color: #f5f9ff;
+    color: #1A1A1A;
+    font-family: "Inter", sans-serif;
+    appearance: none;              /* quita estilo nativo */
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%231B4E7A' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+}
+
+.role-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(27, 78, 122, 0.25);
+}
+
+.role-select option {
+    padding: 10px;
 }

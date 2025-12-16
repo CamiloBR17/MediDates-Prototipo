@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MediDates | Médicos - Administrador</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- HEADER ADMIN -->
+<header class="dashboard-header">
+    <img src="../img/logo-medidates.png" class="dashboard-logo" alt="MediDates">
+
+    <div class="dashboard-user">
+        Administrador
+        <div class="dashboard-avatar">AD</div>
+
+        <button class="btn-secondary small"
+                onclick="location.href='../login.html'">
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="dashboard-container fade-in">
+
+    <a href="dashboard-admin.html" class="back-button">
+        ← Volver al dashboard
+    </a>
+
+    <h1 class="dashboard-title">Médicos registrados</h1>
+    <p class="dashboard-subtitle">
+        Gestión de profesionales de la salud dentro de la plataforma.
+    </p>
+
+    <!-- LISTA DE MÉDICOS -->
+    <section class="appointments-list">
+
+        <!-- MÉDICO 1 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Dr. Ramírez</h3>
+                <p class="appointment-info">Especialidad: Cardiología</p>
+                <p class="appointment-info">Estado: Activo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-primary small">Desactivar</button>
+            </div>
+        </div>
+
+        <!-- MÉDICO 2 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Dra. Laura Gómez</h3>
+                <p class="appointment-info">Especialidad: Pediatría</p>
+                <p class="appointment-info">Estado: Activo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-primary small">Desactivar</button>
+            </div>
+        </div>
+
+        <!-- MÉDICO 3 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Dr. Carlos Méndez</h3>
+                <p class="appointment-info">Especialidad: Traumatología</p>
+                <p class="appointment-info">Estado: Inactivo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-secondary small">Activar</button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

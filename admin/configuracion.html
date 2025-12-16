@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates | Configuración del sistema</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- HEADER ADMIN -->
+    <header class="dashboard-header">
+        <img src="../img/logo-medidates.png" alt="MediDates" class="dashboard-logo">
+
+        <div class="dashboard-user">
+            Administrador
+            <div class="dashboard-avatar">AD</div>
+
+            <button class="btn-secondary small"
+                onclick="location.href='../login.html'">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="dashboard-container fade-in">
+
+        <h1 class="dashboard-title">Configuración del sistema</h1>
+        <p class="dashboard-subtitle">
+            Administra parámetros generales y preferencias de la plataforma.
+        </p>
+
+        <!-- CONFIGURACIÓN GENERAL -->
+        <section class="card">
+            <p class="card-label">GENERAL</p>
+
+            <div class="form-group">
+                <label>Nombre de la plataforma</label>
+                <input type="text" value="MediDates" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Correo de soporte</label>
+                <input type="email" value="soporte@medidates.com">
+            </div>
+
+            <div class="form-group">
+                <label>Horario de atención</label>
+                <select>
+                    <option>Lunes a Viernes · 8:00 a.m. – 8:00 p.m.</option>
+                    <option>Lunes a Sábado · 8:00 a.m. – 6:00 p.m.</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- CONFIGURACIÓN DE CITAS -->
+        <section class="card">
+            <p class="card-label">CITAS</p>
+
+            <div class="form-group">
+                <label>Duración estándar de cita</label>
+                <select>
+                    <option>30 minutos</option>
+                    <option>45 minutos</option>
+                    <option>60 minutos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Permitir cancelaciones</label>
+                <select>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- CONFIGURACIÓN DE USUARIOS -->
+        <section class="card">
+            <p class="card-label">USUARIOS</p>
+
+            <div class="form-group">
+                <label>Registro de pacientes</label>
+                <select>
+                    <option>Automático</option>
+                    <option>Con aprobación del administrador</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Alta de médicos</label>
+                <select>
+                    <option>Solo administrador</option>
+                    <option>Solicitud externa</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- BOTONES -->
+        <section class="card">
+            <div class="card-buttons">
+                <button class="btn-secondary">Restablecer</button>
+                <button class="btn-primary">Guardar cambios</button>
+            </div>
+        </section>
+
+        <!-- VOLVER -->
+        <a href="dashboard-admin.html" class="back-button">
+            ← Volver al dashboard
+        </a>
+
+    </main>
+
+</body>
+
+</html>

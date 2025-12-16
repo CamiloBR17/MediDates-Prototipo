@@ -17,9 +17,14 @@
     <img src="img/logo-medidates.png" class="dashboard-logo" alt="Logo MediDates" />
 
     <div class="dashboard-user">
-      <span>Hola, Juan 👋</span>
-      <div class="dashboard-avatar">J</div>
-    </div>
+  <span>Hola, Juan 👋</span>
+
+  <button class="btn-secondary small" onclick="cerrarSesion()">
+    Cerrar sesión
+  </button>
+
+  <div class="dashboard-avatar">J</div>
+</div>
   </header>
 
   <main class="dashboard-container">
@@ -128,6 +133,13 @@
     document.getElementById("fecha-cita").textContent =
       hoy.toLocaleDateString("es-ES", opciones);
   </script>
+
+  <script>
+  function cerrarSesion() {
+    // Simulación de cierre de sesión
+    window.location.href = "login.html";
+  }
+</script>
 
 </body>
 

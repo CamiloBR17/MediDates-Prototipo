@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MediDates | Mis citas - Médico</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- HEADER MÉDICO -->
+<header class="dashboard-header">
+    <img src="../img/logo-medidates.png" class="dashboard-logo" alt="MediDates">
+
+    <div class="dashboard-user">
+        Dr. Ramírez
+        <div class="dashboard-avatar">DR</div>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="dashboard-container fade-in">
+
+    <h1 class="dashboard-title">Mis citas</h1>
+    <p class="dashboard-subtitle">
+        Consulta y gestiona tu agenda médica.
+    </p>
+
+    <!-- TARJETA RESUMEN -->
+    <section class="card card-summary">
+        <div class="summary-content">
+            <h3 class="card-title">Agenda del día</h3>
+            <ul class="summary-list">
+                <li>5 citas programadas</li>
+                <li>2 consultas pendientes</li>
+                <li>1 paciente nuevo</li>
+            </ul>
+        </div>
+
+        <img src="/PrototipoWeb/img/img-doctor-citas.png"
+             alt="Agenda médica"
+             class="summary-img">
+    </section>
+
+    <!-- LISTA DE CITAS -->
+    <section class="appointments-list">
+
+        <!-- CITA 1 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Juan Bedoya</h3>
+                <p class="appointment-info">
+                    Hoy · 10:30 a. m. · Cardiología
+                </p>
+                <p class="appointment-info">
+                    Consulta general
+                </p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">
+                    Ver expediente
+                </button>
+                <button class="btn-primary small">
+                    Iniciar consulta
+                </button>
+            </div>
+        </div>
+
+        <!-- CITA 2 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">María López</h3>
+                <p class="appointment-info">
+                    Hoy · 12:00 p. m. · Cardiología
+                </p>
+                <p class="appointment-info">
+                    Seguimiento
+                </p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">
+                    Ver expediente
+                </button>
+                <button class="btn-primary small">
+                    Iniciar consulta
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- BOTÓN REGRESAR -->
+    <a href="dashboard-doctor.html" class="back-button">
+        ← Volver al dashboard
+    </a>
+
+</main>
+
+</body>
+</html>

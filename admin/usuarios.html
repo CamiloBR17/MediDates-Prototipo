@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MediDates | Usuarios - Administrador</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- HEADER ADMIN -->
+<header class="dashboard-header">
+    <img src="../img/logo-medidates.png" class="dashboard-logo" alt="MediDates">
+
+    <div class="dashboard-user">
+        Administrador
+        <div class="dashboard-avatar">AD</div>
+
+        <button class="btn-secondary small"
+                onclick="location.href='../login.html'">
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="dashboard-container fade-in">
+
+    <a href="dashboard-admin.html" class="back-button">
+        ← Volver al dashboard
+    </a>
+
+    <h1 class="dashboard-title">Usuarios registrados</h1>
+    <p class="dashboard-subtitle">
+        Gestión de pacientes registrados en la plataforma MediDates.
+    </p>
+
+    <!-- LISTA DE USUARIOS -->
+    <section class="appointments-list">
+
+        <!-- USUARIO 1 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Juan Bedoya</h3>
+                <p class="appointment-info">Correo: juan@medidates.com</p>
+                <p class="appointment-info">Estado: Activo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-primary small">Desactivar</button>
+            </div>
+        </div>
+
+        <!-- USUARIO 2 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">María López</h3>
+                <p class="appointment-info">Correo: maria@medidates.com</p>
+                <p class="appointment-info">Estado: Activo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-primary small">Desactivar</button>
+            </div>
+        </div>
+
+        <!-- USUARIO 3 -->
+        <div class="appointment-card">
+            <div>
+                <h3 class="appointment-title">Carlos Méndez</h3>
+                <p class="appointment-info">Correo: carlos@medidates.com</p>
+                <p class="appointment-info">Estado: Inactivo</p>
+            </div>
+
+            <div class="appointment-actions">
+                <button class="btn-secondary small">Ver perfil</button>
+                <button class="btn-secondary small">Activar</button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

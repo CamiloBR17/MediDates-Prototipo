@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates | Perfil del Médico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- HEADER -->
+<header class="dashboard-header">
+    <img src="../img/logo-medidates.png" alt="MediDates" class="dashboard-logo">
+
+    <div class="dashboard-user">
+        <span>Dr. Ramírez</span>
+        <div class="dashboard-avatar">DR</div>
+
+        <button class="btn-secondary small" onclick="location.href='/PrototipoWeb/login.html'">
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="dashboard-container fade-in">
+
+    <h1 class="dashboard-title">Mi perfil</h1>
+    <p class="dashboard-subtitle">
+        Administra tu información profesional y de contacto.
+    </p>
+
+    <div class="profile-container">
+
+        <!-- FOTO -->
+        <div class="profile-photo-section">
+            <img src="/PrototipoWeb/img/avatar-doctor.png" class="profile-photo" alt="Doctor">
+            <p class="card-info">Dr. Juan Ramírez</p>
+            <button class="btn-secondary small">
+                Cambiar foto
+            </button>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form class="profile-form">
+
+            <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" value="Juan Ramírez">
+            </div>
+
+            <div class="form-group">
+                <label>Especialidad</label>
+                <input type="text" value="Cardiología">
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" value="dr.ramirez@medidates.com">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" value="+52 33 1234 5678">
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-primary">
+                    Guardar cambios
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <a href="dashboard-doctor.html" class="back-button">
+        ← Volver al dashboard
+    </a>
+
+</main>
+
+</body>
+</html>

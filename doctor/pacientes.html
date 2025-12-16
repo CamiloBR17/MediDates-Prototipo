@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates | Pacientes - Médico</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- HEADER -->
+<header class="dashboard-header">
+    <img src="../img/logo-medidates.png" alt="MediDates" class="dashboard-logo">
+
+    <div class="dashboard-user">
+        <span>Dr. Ramírez</span>
+        <div class="dashboard-avatar">DR</div>
+
+        <button class="btn-secondary small" onclick="location.href='/PrototipoWeb/login.html'">
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="dashboard-container fade-in">
+
+    <h1 class="dashboard-title">Pacientes</h1>
+    <p class="dashboard-subtitle">
+        Revisa los expedientes clínicos de tus pacientes asignados.
+    </p>
+
+    <!-- LISTA DE PACIENTES -->
+    <section class="doctors-grid">
+
+        <!-- PACIENTE 1 -->
+        <div class="doctor-card">
+            <img src="/PrototipoWeb/img/avatar-paciente-1.png" class="doctor-photo" alt="Paciente">
+            <h3 class="doctor-name">Juan Bedoya</h3>
+            <p class="doctor-spec">Cardiología</p>
+            <p class="doctor-hospital">Consulta general</p>
+
+            <div class="doctor-actions">
+                <button class="btn-primary small">
+                    Ver expediente
+                </button>
+            </div>
+        </div>
+
+        <!-- PACIENTE 2 -->
+        <div class="doctor-card">
+            <img src="/PrototipoWeb/img/avatar-paciente-2.png" class="doctor-photo" alt="Paciente">
+            <h3 class="doctor-name">María López</h3>
+            <p class="doctor-spec">Cardiología</p>
+            <p class="doctor-hospital">Seguimiento</p>
+
+            <div class="doctor-actions">
+                <button class="btn-primary small">
+                    Ver expediente
+                </button>
+            </div>
+        </div>
+
+        <!-- PACIENTE 3 -->
+        <div class="doctor-card">
+            <img src="/PrototipoWeb/img/avatar-paciente-3.png" class="doctor-photo" alt="Paciente">
+            <h3 class="doctor-name">Carlos Hernández</h3>
+            <p class="doctor-spec">Cardiología</p>
+            <p class="doctor-hospital">Primera consulta</p>
+
+            <div class="doctor-actions">
+                <button class="btn-primary small">
+                    Ver expediente
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- BOTÓN REGRESAR -->
+    <a href="dashboard-doctor.html" class="back-button">
+        ← Volver al dashboard
+    </a>
+
+</main>
+
+</body>
+</html>

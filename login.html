@@ -1,74 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MediDates - Iniciar sesión</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="login-body fade-in">
+<body class="login-body">
 
-    <div class="login-container">
+    <main class="login-container">
 
-        <!-- FORMULARIO -->
-        <div class="login-card">
-            <img src="img/img-hero-login.png" class="login-illustration">
+        <!-- CARD LOGIN -->
+        <section class="login-card fade-in">
+
+            <img src="img/logo-medidates.png" alt="MediDates" class="login-logo">
+
             <div class="login-header">
-                <h1 class="login-title">Bienvenido</h1>
-                <p class="login-subtitle">Inicia sesión en tu cuenta MediDates</p>
+                <h1>Bienvenido</h1>
+                <p>Inicia sesión en tu cuenta MediDates</p>
             </div>
 
-            <form id="form-login" class="login-form">
+            <form class="login-form" onsubmit="return validarLogin()">
+                <label>Correo electrónico</label>
+                <input type="email" id="email" placeholder="correo@ejemplo.com">
 
-                <label for="login-email">Correo electrónico</label>
-                <input type="email" id="login-email" placeholder="usuario@ejemplo.com" />
+                <label>Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••">
 
-                <label for="login-password">Contraseña</label>
-                <input type="password" id="login-password" placeholder="••••••••" />
+                <label for="role">Tipo de usuario</label>
+                <select id="role" class="role-select">
+                    <option value="">Selecciona una opción</option>
+                    <option value="paciente">Paciente</option>
+                    <option value="doctor">Médico</option>
+                    <option value="admin">Administrador</option>
+                </select>
 
-                <!-- MENSAJE DE ERROR -->
-                <div id="login-error" class="alert alert-error" style="display:none;"></div>
-
-                <button type="submit" class="btn-primary login-btn">Iniciar sesión</button>
-
-                <div class="login-links">
-                    <a href="#" class="small-link">¿Olvidaste tu contraseña?</a><br>
-                    <a href="register.html" class="small-link">¿No tienes cuenta? Regístrate</a>
+                <div id="role-error" class="alert alert-error" style="display:none;">
+                    Debes seleccionar un tipo de usuario.
                 </div>
 
+                <button type="submit" class="btn-primary login-btn">
+                    Iniciar sesión
+                </button>
             </form>
-        </div>
+
+            <div class="login-extra">
+                <a href="forgot-password.html" class="small-link">
+                    ¿Olvidaste tu contraseña?
+                </a>
+                <a href="register.html" class="small-link">
+                    ¿No tienes cuenta? Regístrate
+                </a>
+            </div>
+
+        </section>
 
         <!-- ILUSTRACIÓN -->
-        <img src="img/img-hero-login-alt.png" class="login-illustration">
+        <section class="login-illustration-container fade-in">
+            <img src="img/img-hero-login.png" alt="Ilustración login" class="login-illustration">
+        </section>
 
-    </div>
+    </main>
 
-    <!-- SCRIPT VALIDACIÓN -->
     <script>
-        const formLogin = document.getElementById("form-login");
-        const email = document.getElementById("login-email");
-        const password = document.getElementById("login-password");
-        const errorBox = document.getElementById("login-error");
+        function validarLogin() {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const role = document.getElementById("role").value;
+            const error = document.getElementById("role-error");
 
-        formLogin.addEventListener("submit", function (e) {
-            e.preventDefault();
+            error.style.display = "none";
+            error.innerText = "";
 
-            errorBox.style.display = "none";
-
-            if (email.value.trim() === "" || password.value.trim() === "") {
-                errorBox.textContent = "Por favor completa todos los campos para iniciar sesión.";
-                errorBox.style.display = "block";
-                return;
+            if (email === "") {
+                mostrarError("El correo electrónico es obligatorio.");
+                return false;
             }
 
-            // Si todo OK → navegar al dashboard
-            location.href = "dashboard.html";
-        });
+            if (password === "") {
+                mostrarError("La contraseña es obligatoria.");
+                return false;
+            }
+
+            if (role === "") {
+                mostrarError("Debes seleccionar un tipo de usuario.");
+                return false;
+            }
+
+            // Redirección simulada
+            if (role === "paciente") {
+                window.location.href = "dashboard.html";
+            } else if (role === "doctor") {
+                window.location.href = "doctor/dashboard-doctor.html";
+            } else if (role === "admin") {
+                window.location.href = "admin/dashboard-admin.html";
+            }
+
+            return false;
+        }
+
+        function mostrarError(mensaje) {
+            const error = document.getElementById("role-error");
+            error.innerText = mensaje;
+            error.style.display = "block";
+        }
     </script>
 
 </body>
+
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediDates | Citas del sistema</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- HEADER ADMIN -->
+    <header class="dashboard-header">
+        <img src="../img/logo-medidates.png" alt="MediDates" class="dashboard-logo">
+
+        <div class="dashboard-user">
+            Administrador
+            <div class="dashboard-avatar">AD</div>
+
+            <button class="btn-secondary small"
+                onclick="location.href='../login.html'">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="dashboard-container fade-in">
+
+        <h1 class="dashboard-title">Citas del sistema</h1>
+        <p class="dashboard-subtitle">
+            Visualiza y supervisa todas las citas médicas registradas.
+        </p>
+
+        <!-- RESUMEN -->
+        <section class="card card-summary">
+            <div class="summary-content">
+                <p class="card-label">RESUMEN GENERAL</p>
+                <ul class="summary-list">
+                    <li><strong>12</strong> citas registradas</li>
+                    <li><strong>5</strong> citas programadas hoy</li>
+                    <li><strong>3</strong> citas canceladas</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- LISTA DE CITAS -->
+        <section class="appointments-list">
+
+            <!-- CITA 1 -->
+            <div class="appointment-card">
+                <div>
+                    <h3 class="appointment-title">Juan Bedoya</h3>
+                    <p class="appointment-info">
+                        Dr. Ramírez · Cardiología
+                    </p>
+                    <p class="appointment-info">
+                        Hoy · 10:30 a. m.
+                    </p>
+                </div>
+
+                <div class="appointment-actions">
+                    <span class="btn-secondary small">Programada</span>
+                </div>
+            </div>
+
+            <!-- CITA 2 -->
+            <div class="appointment-card">
+                <div>
+                    <h3 class="appointment-title">María López</h3>
+                    <p class="appointment-info">
+                        Dra. Sánchez · Pediatría
+                    </p>
+                    <p class="appointment-info">
+                        Hoy · 12:00 p. m.
+                    </p>
+                </div>
+
+                <div class="appointment-actions">
+                    <span class="btn-primary small">Completada</span>
+                </div>
+            </div>
+
+            <!-- CITA 3 -->
+            <div class="appointment-card">
+                <div>
+                    <h3 class="appointment-title">Carlos Hernández</h3>
+                    <p class="appointment-info">
+                        Dr. Gómez · Medicina General
+                    </p>
+                    <p class="appointment-info">
+                        Ayer · 4:00 p. m.
+                    </p>
+                </div>
+
+                <div class="appointment-actions">
+                    <span class="btn-secondary small">Cancelada</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- VOLVER -->
+        <a href="dashboard-admin.html" class="back-button">
+            ← Volver al dashboard
+        </a>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,125 +1,173 @@
 # 🩺 MediDates – Prototipo UI/UX  
-**Sprint 3 – Navegación interna y pantallas avanzadas**
+**Plataforma médica multi-rol (Paciente · Médico · Administrador)**
 
-MediDates es un prototipo visual no funcional desarrollado para el curso **Diseño y Gestión de Sistemas**.  
-Su objetivo es representar la interfaz, navegación y flujo principal de una plataforma médica orientada a la gestión de citas, historial clínico y perfil del paciente.
+MediDates es un **prototipo web UI/UX no funcional** desarrollado para el curso **Diseño y Gestión de Sistemas** en la  
+**Universidad del Valle de México (UVM)**.
 
-Este repositorio documenta los avances del proyecto siguiendo una metodología ágil basada en **sprints**, permitiendo observar el progreso del sistema etapa por etapa.
+El proyecto simula visualmente una plataforma médica moderna orientada a la **gestión de citas, historial clínico y perfiles de usuario**, aplicando una **metodología ágil basada en sprints** para mostrar su evolución progresiva.
 
 ---
 
-## 📌 Descripción del proyecto
+## 📌 Objetivo del proyecto
 
-MediDates simula visualmente el funcionamiento de un sistema médico moderno, permitiendo:
+Diseñar y documentar la **experiencia de usuario, navegación y arquitectura visual** de un sistema médico digital, mostrando:
 
-- Consultar el panel del paciente
-- Gestionar próximas citas
-- Visualizar médicos de confianza
-- Agendar nuevas citas
-- Revisar historial médico
-- Editar información del perfil del usuario
+- Flujo completo de navegación
+- Diferenciación clara de roles
+- Diseño profesional y consistente
+- Preparación para una futura implementación funcional
 
-El prototipo NO incluye backend ni base de datos.  
-Se trata de un diseño funcional para demostrar flujo, experiencia de usuario y arquitectura visual.
+⚠️ **Este prototipo no cuenta con backend ni base de datos.**  
+Toda la funcionalidad es simulada con fines académicos.
+
+---
+
+## 👥 Roles del sistema
+
+MediDates contempla **tres tipos de usuario**, cada uno con su propio dashboard y flujo:
+
+### 🧑‍⚕️ Paciente
+- Dashboard principal
+- Mis citas
+- Agendar cita
+- Historial médico
+- Mis médicos
+- Perfil del usuario
+
+### 🩺 Médico
+- Dashboard médico
+- Mis citas
+- Pacientes
+- Perfil del médico
+
+### 🛠️ Administrador
+- Dashboard administrativo
+- Gestión de usuarios
+- Gestión de médicos
+- Gestión de citas
+- Configuración del sistema
 
 ---
 
 ## 🗂️ Estructura del proyecto
 
 📁 MediDates
-├── dashboard.html # Panel principal del paciente
-├── mis-citas.html # Pantalla de citas médicas
-├── mis-medicos.html # Tarjetas de médicos asignados
-├── agendar-cita.html # Formulario interactivo con validaciones visuales
-├── historial.html # Vista del historial clínico
-├── perfil.html # Perfil del usuario y edición de datos
-├── login.html # Inicio de sesión
-├── register.html # Registro de usuario
-├── forgot-password.html # Recuperación de contraseña
-├── css/styles.css # Estilos globales y premium del prototipo
-├── js/alerts.js # Lógica de validaciones y alertas de formularios
-├── img/ # Logos, doctores e ilustraciones
-└── README.md # Documentación del proyecto
+├── index.html / login.html
+├── register.html
+├── forgot-password.html
+├── dashboard.html # Paciente
+├── mis-citas.html
+├── mis-medicos.html
+├── agendar-cita.html
+├── historial.html
+├── perfil.html
+│
+├── doctor/
+│ ├── dashboard-doctor.html
+│ ├── mis-citas.html
+│ ├── pacientes.html
+│ └── perfil.html
+│
+├── admin/
+│ ├── dashboard-admin.html
+│ ├── usuarios.html
+│ ├── medicos.html
+│ ├── citas.html
+│ └── configuracion.html
+│
+├── css/
+│ └── styles.css # Estilos globales premium
+│
+├── img/
+│ ├── logo-medidates.png
+│ ├── avatars/
+│ ├── doctors/
+│ └── illustrations/
+│
+└── README.md
 
 
 ---
 
 # 🚀 Avances por Sprint
 
-## 🔵 Sprint 1 – Estructura base y wireframes
-- Listado de pantallas
-- Bocetos y flujo inicial
+## 🔵 Sprint 1 – Planeación y estructura base
+- Identificación de pantallas necesarias
+- Definición del flujo general
+- Bocetos iniciales (wireframes)
 - Decisión del prototipo web
 - Asignación de roles del equipo
 
 ---
 
 ## 🟣 Sprint 2 – Diseño visual inicial
-- Login profesional  
-- Dashboard con header fijo  
-- Iconografía base  
-- Quick actions con estilo premium  
-- Navegación inicial entre Login → Dashboard  
-- Integración de ilustraciones y logo oficial  
+- Login profesional
+- Dashboard del paciente
+- Header fijo premium
+- Iconografía base
+- Quick actions
+- Integración del logo MediDates
+- Navegación básica Login → Dashboard
 
 ---
 
-## 🔵 Sprint 3 – Navegación interna + pantallas completas
-Este sprint introduce todas las **pantallas internas** del prototipo:
-
-### ✔ Mis Citas
-- Filtros (Próximas, Pasadas, Canceladas)  
-- Diseño responsivo  
-- Botones funcionales  
-
-### ✔ Mis Médicos
-- Tarjetas profesionales con fotos reales  
-- Especialidades y hospitales  
-- Botones para agendar y ver perfil  
-
-### ✔ Perfil del Usuario
-- Nueva foto de perfil profesional  
-- Formulario visual mejorado  
-- Inputs premium con microinteracciones  
-
-### ✔ Agendar Cita
-- Formulario completo  
-- Validaciones visuales:
-  - ❌ error si falta un dato o fecha inválida  
-  - ✔ alerta verde si la cita se agenda correctamente  
-- Alertas premium (exitosas y de error)
-- Auto-cierre y reinicio del formulario  
-
-### ✔ Mejoras globales del Sprint 3:
-- Header fijo premium en todas las páginas  
-- Footer profesional unificado  
-- Logo ajustado correctamente (sin deformaciones)  
-- Imágenes optimizadas y renombradas  
-- Quick actions reorganizados  
-- Dashboard con datos mejorados y sin duplicación  
-- Microinteracciones en tarjetas y botones  
+## 🔵 Sprint 3 – Navegación interna y pantallas completas
+- Mis citas (filtros visuales)
+- Mis médicos (tarjetas profesionales)
+- Perfil del usuario
+- Agendar cita con validaciones visuales
+- Historial médico
+- Footer unificado
+- Alertas visuales (éxito y error)
+- Microinteracciones UI
+- Corrección de imágenes, tamaños y espaciados
 
 ---
 
-## 🖼️ Recursos visuales incluidos
+## 🟢 Sprint 4 – Multi-rol y navegación completa
+En este sprint se consolidó el sistema a nivel profesional:
 
-El proyecto incorpora:
+### ✔ Login con selección de rol
+- Paciente / Médico / Administrador
+- Validaciones visuales
+- Redirección automática por rol
+- Recuperación de contraseña
+- Cerrar sesión funcional
 
-- **Fotografías profesionales de doctores**
-- **Nueva imagen de perfil del usuario**
-- **Ilustraciones médicas** de apoyo visual
-- **Logo oficial MediDates** en tamaños correctos
-- **Iconos tipo “A”** para las acciones rápidas
+### ✔ Dashboards por rol
+- Dashboard independiente para:
+  - Paciente
+  - Médico
+  - Administrador
+- Navegación completa entre todas las vistas
+- Botones funcionales (simulados)
 
-Todo esto con nombres estandarizados para una integración limpia.
+### ✔ UX/UI avanzado
+- Ilustraciones médicas en español
+- Avatares diferenciados
+- Diseño consistente por rol
+- Responsive design
+- Paleta basada en el branding MediDates
+
+📌 **El alcance del Sprint 4 se centra en experiencia de usuario y arquitectura visual.**
+
+---
+
+## 🔜 Sprint 5 – Planeado
+- Simulación de lógica real en frontend:
+  - Agendar, reprogramar y cancelar citas
+  - Citas activas, pasadas y canceladas
+  - Detalles del historial médico
+  - Flujo completo paciente ↔ médico
+- Preparación para integración con backend
 
 ---
 
 ## 🖥️ Cómo ejecutar el prototipo
 
-1. Descargar o clonar el repositorio  
-2. Abrir la carpeta del proyecto  
-3. Ejecutar cualquier archivo `.html` con **Live Server** (VS Code)  
+1. Clonar o descargar el repositorio
+2. Abrir la carpeta en **Visual Studio Code**
+3. Ejecutar cualquier archivo `.html` con **Live Server**
 4. Navegar usando los botones del prototipo
 
 ---
@@ -127,20 +175,21 @@ Todo esto con nombres estandarizados para una integración limpia.
 ## 👥 Equipo MediDates
 
 | Integrante | Rol | Responsabilidad |
-|-----------|------|-----------------|
-| **Juan Camilo Bedoya** | Director de Sistemas | Diseño técnico del prototipo, integración visual, arquitectura UI |
-| **Erick** | UI/UX Designer | Diseño gráfico, paleta, componentes |
-| **Joel** | Análisis & Finanzas | Modelo de negocio, propuesta de valor |
-| **Josué** | Backend conceptual | Flujo futuro del sistema |
-| **Nelly** | Documentación | Reportes y respaldo escrito |
+|-----------|------|----------------|
+| **Juan Camilo Bedoya Restrepo** | Director de Sistemas | Arquitectura UI, integración visual y lógica de navegación |
+| Erick | UI/UX Designer | Diseño gráfico y componentes |
+| Joel | Análisis y Finanzas | Modelo de negocio |
+| Josué | Backend conceptual | Flujo futuro del sistema |
+| Nelly | Documentación | Evidencia y reportes |
 
 ---
 
-## 📬 Contacto  
+## 📬 Contacto
 Proyecto académico – Universidad del Valle de México  
 Desarrollado por **Juan Camilo Bedoya Restrepo**
 
 ---
 
-# 💙 Gracias por revisar MediDates  
-Prototipo académico para fines educativos.
+# 💙 MediDates
+Prototipo académico desarrollado con metodología ágil  
+para fines educativos y de demostración visual.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MediDates | Administrador</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- HEADER ADMIN -->
+    <header class="dashboard-header">
+        <img src="../img/logo-medidates.png" class="dashboard-logo" alt="MediDates">
+
+        <div class="dashboard-user">
+            Administrador
+            <div class="dashboard-avatar">AD</div>
+
+            <button class="btn-secondary small" onclick="location.href='../login.html'">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="dashboard-container fade-in">
+
+        <h1 class="dashboard-title">Panel del administrador</h1>
+        <p class="dashboard-subtitle">
+            Supervisa el sistema, gestiona usuarios, médicos y citas.
+        </p>
+
+        <!-- TARJETAS KPI -->
+        <section class="options-grid">
+
+            <div class="option-card">
+                <h3>Usuarios</h3>
+                <p><strong>120</strong> registrados</p>
+            </div>
+
+            <div class="option-card">
+                <h3>Médicos</h3>
+                <p><strong>15</strong> activos</p>
+            </div>
+
+            <div class="option-card">
+                <h3>Citas</h3>
+                <p><strong>28</strong> hoy</p>
+            </div>
+
+        </section>
+
+        <!-- ACCIONES DEL ADMIN -->
+        <div class="options-grid">
+
+            <a href="usuarios.html" class="option-card">
+                <div class="option-icon option-icon-profile">👥</div>
+                <h3>Usuarios</h3>
+                <p>Gestiona pacientes registrados.</p>
+            </a>
+
+            <a href="medicos.html" class="option-card">
+                <div class="option-icon option-icon-doctor">🩺</div>
+                <h3>Médicos</h3>
+                <p>Alta y administración de médicos.</p>
+            </a>
+
+            <a href="citas.html" class="option-card">
+                <div class="option-icon option-icon-calendar">📅</div>
+                <h3>Citas</h3>
+                <p>Consulta todas las citas del sistema.</p>
+            </a>
+
+            <a href="configuracion.html" class="option-card">
+                <div class="option-icon option-icon-history">⚙️</div>
+                <h3>Configuración</h3>
+                <p>Ajustes del sistema y cuenta admin.</p>
+            </a>
+
+        </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
